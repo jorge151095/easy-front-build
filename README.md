@@ -16,9 +16,9 @@ $ node index.js --name=<"FileName"> --logic
 To generate a module of ui: (whitout " any <>)
 
 ```sh
-$ node index.js --name="FileName" --ui
+$ node index.js --name="FileName" [--ui, --logic]
 or
-$ npm run create -- --name="fileName" --ui
+$ npm run create -- --name="fileName" [--ui, --logic]
 ```
 
 
