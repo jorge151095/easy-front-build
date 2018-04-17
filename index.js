@@ -1,3 +1,3 @@
-const createDirectory = require('./lib/index.js');
+const createDirectory = require('./bin/index.js');
 
 createDirectory();
