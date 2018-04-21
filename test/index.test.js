@@ -42,13 +42,11 @@ test('ReadFile', (done) => {
 
     const promise = core.ReadFile('templateHTML', 'testFile');
 
-    expect.assertions(0);
+    expect.assertions(1);
 
     return promise.then(data => {
-        expect(data).toBe(dummy.templateHTML);
+        expect(data).toEqual({});
         done();
         stub.restore();
     })
-
-
 });
