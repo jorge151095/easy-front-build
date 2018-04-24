@@ -41,23 +41,18 @@ test('WriteDirectories', (done) => {
         return true;
     });
 
-    const stubmkdir = sinon.stub(fs, 'mkdirSync').callsFake(() => {
-        throw Error('ERROR FATAL CREATING DIR. YOU NEED TO CRY');
-    });
-
-    const stubWrite = sinon.stub(core, 'WriteDirectory').callsFake(() => {
-        throw Error('ERROR FATAL CREATING SUB DIR. YOU NEED TO CRY');
-    });
+   const spy = sinon.spy(core,'WriteDirectory');
+    
 
     const promise = core.WriteDirectories('test', 'front_modules');
 
     expect.assertions(1);
     return promise.then(data => {
-        expect(data).toBe(true);
         done();
-        stubmkdir.restore();
+        expect(spy.calledOnce).toBe(true);
+        spy.restore();
         stubExist.restore();
-        stubWrite.restore();
+        //stubWrite.restore();
     });
 
 });
