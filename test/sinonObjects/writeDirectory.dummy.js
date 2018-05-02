@@ -18,4 +18,37 @@ const templateHTML = `
 const templateCSS = `${name}{\n}`;
 const templateJS = `(function ${name} () {\n\t}();`;
 
-module.exports = {templateHTML, templateCSS, templateJS};
+const templateTEST = `use strict';
+
+const core = require('../lib/${name}.js');
+const helper = require('./sinonObjects/${name}.sinon.js');
+
+test('case test', () => {
+
+    // @TODO case test here !
+
+});
+`
+
+const templateSINON = `const sinon = require('sinon');
+const dummy = {};
+
+const mock = sinon.mock(object);
+//@TODO actions here!
+
+mock.verify();
+
+mock.restore();
+
+const spy = sinon.spy(object,  'function${name}');
+//@TOD functions watcher here!
+
+spy.restore();
+const stub = sinon.stub(object,  'function${name}').callsFake(() => {
+    //@TODO the overwrite behavior
+});
+
+// @TODO assertions or expects here!
+stub.restore();`
+
+module.exports = {templateHTML, templateCSS, templateJS,templateTEST ,templateSINON };

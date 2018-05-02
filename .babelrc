@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "presets": ["env"]
+=======
+  "presets": ["env"]
+>>>>>>> 13d5a14b9f9cf6c0aacf19b64c9b64a2a3a4dbbc
 }
