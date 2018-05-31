@@ -8,14 +8,8 @@
   },
   "scripts": {
     "test": "jest --config=jest.config.js",
-<<<<<<< HEAD
     "coverage": "concurrently 'http-server -a localhost -p 1234' 'open http://localhost:1234/coverage'",
-    "start": "node index",
-    "create": "node index.js"
-=======
-    "coverage": "concurrently 'http-server -a localhost -p 1234' 'open http://localhost:1234/coverage' ",
     "start": "node lib/index.js"
->>>>>>> 13d5a14b9f9cf6c0aacf19b64c9b64a2a3a4dbbc
   },
   "repository": {
     "type": "git",
